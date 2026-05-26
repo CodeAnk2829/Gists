@@ -31,3 +31,15 @@ Synthesize the retrieved API signatures, module imports, and structural context 
  1. **Forced Step-by-Step Execution:** By breaking the task into an explicit workflow (Extract \rightarrow Translate \rightarrow Verify \rightarrow Generate), the LLM is forced to "show its work" internally before writing code, drastically reducing the chance of it skipping straight to hallucinated code.
  2. **The Translation Table:** The table gives the LLM concrete, few-shot examples of how to convert "human speak" into "graph speak."
  3. **The "Halt" Command:** The instruction to stop and ask the user if Graphify returns nothing is the ultimate hallucination killer. Standard LLMs are people-pleasers and will guess an API if they can't find one; this gives the agent permission to fail gracefully.
+
+
+
+
+
+
+I am using an AI coding assistant. This AI coding assistant will have a job to find relevant APIs for the natural language query coming from the user and generate code from the extracted relevant APIs. For the retrieval of relevant APIs graphify is being used. 
+Now graphify expects questions like someone is asking as a system architect as you described in the previous response. Now users will not give queries like a system architect rather they will give queries in natural language, and it’s agent’s responsibility to understand the intent of the user’s query and ask the right questions to graphify by pretending itself as a system architect in order to retrieve relevant APIs related to the user’s query followed by code generation. 
+
+I want to give the AI coding assistant this capability to ask right questions to graphify to achieve above described objectives via system prompt.
+
+Write a robust and clear system prompt for this so that the AI coding assistant can achieve the objective without hallucinations
